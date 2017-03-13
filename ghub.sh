@@ -6,10 +6,8 @@ repo_addr() {
 }
 
 webpage() {
-  if hash browser; then
-    browser "$1"
-  else
-    open "$1"
+  # open with default browser
+  open "$1"
 }
 
 main() {
@@ -21,6 +19,7 @@ main() {
     webpage "$addr"
   else
     echo "This is not a git repository"
+  fi
 }
 
 
